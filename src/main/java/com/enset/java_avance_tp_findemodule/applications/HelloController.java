@@ -1,4 +1,4 @@
-package com.enset.java_avance_tp_findemodule;
+package com.enset.java_avance_tp_findemodule.applications;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

@@ -15,7 +15,7 @@ public class PatientDAO implements IpatientDAO {
     @Override
     public void insert(Patient patient) throws SQLException {
 Connection connection= BDConnection.getConnection();
-PreparedStatement preparedStatement=connection.prepareStatement("insert into Patient(First_Name,Last_Name,Tel)"+"values (?,?,?)");
+PreparedStatement preparedStatement=connection.prepareStatement("insert into Patient_Info(First_Name,Last_Name,Tel)"+"values (?,?,?)");
 preparedStatement.setString(1,patient.getFirstName());
 preparedStatement.setString(2,patient.getLastName());
 preparedStatement.setString(3, patient.getTel());
@@ -28,7 +28,7 @@ preparedStatement.execute();
     @Override
     public void update(Patient patient) throws SQLException {
 Connection connection= BDConnection.getConnection();
-PreparedStatement psm=connection.prepareStatement("update Patient set First_NAME=?,Last_Name=?,Tel=? where ID_Patient=?");
+PreparedStatement psm=connection.prepareStatement("update Patient_Info set First_NAME=?,Last_Name=?,Tel=? where ID_Patient=?");
         psm.setString(1,patient.getFirstName());
 psm.setString(2,patient.getLastName());
 psm.setString(3,patient.getTel());
@@ -39,7 +39,7 @@ psm.execute();
     @Override
     public void delete(Patient patient) throws SQLException {
 Connection connection= BDConnection.getConnection();
-PreparedStatement psm=connection.prepareStatement("DELETE from Patient where ID_Patient=?");
+PreparedStatement psm=connection.prepareStatement("DELETE from Patient_Info where ID_Patient=?");
         psm.setLong(1,patient.getId());
 psm.execute();
     }
@@ -48,7 +48,7 @@ psm.execute();
     public List<Patient> getAll() throws SQLException {
         Connection connection= BDConnection.getConnection();
 
-        PreparedStatement psm=connection.prepareStatement("select * from Patient");
+        PreparedStatement psm=connection.prepareStatement("select * from Patient_Info");
         ResultSet rs =psm.executeQuery();
         List<Patient> patients=new ArrayList<>();
         while (rs.next()){
@@ -65,10 +65,10 @@ psm.execute();
     }
 
     @Override
-    public Patient getById(int id) throws SQLException {
+    public Patient getById(Long id) throws SQLException {
 
         Connection connection= BDConnection.getConnection();
-        PreparedStatement psm=connection.prepareStatement("SELECT * from Patient where ID_Patient=?");
+        PreparedStatement psm=connection.prepareStatement("SELECT * from Patient_Info where ID_Patient=?");
         psm.setLong(1,id);
         ResultSet rs =psm.executeQuery();
         Patient patient=new Patient();
