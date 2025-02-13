@@ -33,12 +33,13 @@ PreparedStatement psm=connection.prepareStatement("update Patient set First_NAME
 psm.setString(2,patient.getLastName());
 psm.setString(3,patient.getTel());
 psm.setLong(4,patient.getId());
+psm.execute();
     }
 
     @Override
     public void delete(Patient patient) throws SQLException {
 Connection connection= BDConnection.getConnection();
-PreparedStatement psm=connection.prepareStatement("DELETE from Patient where ID_Patient=?")
+PreparedStatement psm=connection.prepareStatement("DELETE from Patient where ID_Patient=?");
         psm.setLong(1,patient.getId());
 psm.execute();
     }

@@ -8,6 +8,6 @@ public interface DAO <E,T>{
     void update(E e) throws SQLException;
     void delete(E e) throws SQLException;
     List<E> getAll() throws SQLException;
-    E getById(int id) throws SQLException;
+    E getById(Long id) throws SQLException;
 
 }
