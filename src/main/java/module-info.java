@@ -2,6 +2,7 @@ module com.enset.java_avance_tp_findemodule {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
+    requires java.desktop;
 
     exports com.enset.java_avance_tp_findemodule.applications;
     exports com.enset.java_avance_tp_findemodule.DAO;

@@ -15,7 +15,8 @@ public class PatientDAO implements IpatientDAO {
     @Override
     public void insert(Patient patient) throws SQLException {
 Connection connection= BDConnection.getConnection();
-PreparedStatement preparedStatement=connection.prepareStatement("insert into Patient_Info(First_Name,Last_Name,Tel)"+"values (?,?,?)");
+PreparedStatement preparedStatement=connection.prepareStatement("insert into Patient_Info(First_Name,Last_Name,Tel)"
+        +"values (?,?,?)");
 preparedStatement.setString(1,patient.getFirstName());
 preparedStatement.setString(2,patient.getLastName());
 preparedStatement.setString(3, patient.getTel());

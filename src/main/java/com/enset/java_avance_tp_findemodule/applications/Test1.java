@@ -13,11 +13,11 @@ public class Test1 {
         IPatientService patientService = new PatientService(new PatientDAO());
         IConsultationService consultationService = new ConsultationService(new ConsultationDAO());
 //Testing if the connextion is established with DataBase and if function is working
-        Patient patient = new Patient();
+       /* Patient patient = new Patient();
         patient.setFirstName("patient1");
         patient.setLastName("patient10");
         patient.setTel("45145125112");
         patientService.addPatient(patient);
-    }
+    }*/
 
 }
