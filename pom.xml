@@ -67,7 +67,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.enset.java_avance_tp_findemodule/com.enset.java_avance_tp_findemodule.applications.HelloApplication
+                                com.enset.java_avance_tp_findemodule/com.enset.java_avance_tp_findemodule.applications.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

@@ -8,15 +8,15 @@
   <tabs>
     <Tab text="Patient">
       <fx:include source="patient_view.fxml"/>
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-      </content>
+<!--      <content>-->
+<!--        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />-->
+<!--      </content>-->
     </Tab>
     <Tab text="Consultation">
       <fx:include source="consultation_view.fxml"/>
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-      </content>
+<!--      <content>-->
+<!--        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />-->
+<!--      </content>-->
     </Tab>
   </tabs>
 </TabPane>

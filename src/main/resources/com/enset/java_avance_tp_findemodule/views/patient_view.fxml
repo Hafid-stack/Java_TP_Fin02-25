@@ -42,9 +42,9 @@
             </GridPane>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
-                  <Button fx:id="buttonAdd" mnemonicParsing="false" text="Add" />
-                  <Button fx:id="buttonDel" mnemonicParsing="false" text="Delete" />
-                  <Button fx:id="buttonUp" mnemonicParsing="false" text="Update" />
+                  <Button fx:id="buttonAdd" mnemonicParsing="false" text="Add" onAction="#addPatient" />
+                  <Button fx:id="buttonDel" mnemonicParsing="false" text="Delete" onAction="#delPatient" />
+                  <Button fx:id="buttonUp" mnemonicParsing="false" text="Update" onAction="#upPatient"/>
                   <TextField fx:id="fieldSearch" />
                </children>
                <padding>
