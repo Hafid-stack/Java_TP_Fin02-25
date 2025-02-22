@@ -9,7 +9,8 @@ public class BDConnection {
     static Connection connection;
     static  {
         try {
-            connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/java_tp_fin","root","");
+            //add your "jdbc:mysql://localhost:your port/your project name","root if your database does not have credentials "," password empty if you dont have credentials"
+            connection= DriverManager.getConnection(//add here);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
