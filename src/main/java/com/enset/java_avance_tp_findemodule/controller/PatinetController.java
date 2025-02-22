@@ -59,6 +59,7 @@ public class PatinetController implements Initializable {
         patient.setTel(fieldTel.getText());
         patientService.addPatient(patient);
         loadPatient();
+
     }
     public void delPatient() {
         Patient patient=tabelPatient.getSelectionModel().getSelectedItem();
